@@ -21,14 +21,14 @@ theme:
   icon:
     repo: fontawesome/brands/git-alt
   palette:
-    - scheme: default
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to dark mode
     - scheme: slate
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to light mode
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
 
 markdown_extensions:
   - pymdownx.highlight:
