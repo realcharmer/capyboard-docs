@@ -1,0 +1,5 @@
+# Mainboard
+
+## Hardware Specifications
+
+## Pinout
