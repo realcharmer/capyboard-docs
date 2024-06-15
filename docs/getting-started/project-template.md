@@ -10,7 +10,7 @@ git clone https://github.com/realcharmer/capyboard-starter
 
 ## File structure
 
-The starter template contains few configuration files and a sample Hello World source code.
+The starter template contains few configuration files and a sample "Hello World" source code.
 
 ### platformio.ini
 
@@ -62,6 +62,17 @@ monitor:
 
 The makefile is used to aid with PlatformIO commands. Instead of having to execute separate commands for building and uploading, the makefile provides a simple alternative. Refer to the [Usage](usage.md) section for more information on how to use Make.
 
-### Source Code
+## Source Code
 
-All source code should be placed in the `src` directory. The starter template provides a very simple starting point. The program initializes serial communication and prints "Hello World" to the serial output. This can easily be expanded for further use.
+All source code should be placed in the `src` directory, typically named `main.ino`. The starter template provides a very simple starting point. The program initializes serial communication and prints "Hello!" to the serial output. This can easily be expanded for further use.
+
+```arduino
+void setup() {
+	Serial.begin(115200);
+}
+
+void loop() {
+	Serial.println("Hello!");
+	delay(1000);
+}
+```
