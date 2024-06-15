@@ -2,6 +2,10 @@ site_name: Capyboard
 repo_url: https://github.com/realcharmer/capyboard-docs
 repo_name: realcharmer/capyboard-docs
 
+plugins:
+  - search
+  - awesome-pages
+
 theme:
   name: material
   language: en
@@ -10,6 +14,7 @@ theme:
     - search.highlight
     - navigation.tabs
     - navigation.sections
+    - navigation.indexes
     - toc.follow
   logo: assets/logo.svg
   favicon: assets/logo.svg
