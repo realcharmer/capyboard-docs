@@ -1,17 +1,13 @@
-# Welcome to MkDocs
+---
+hide:
+  - navigation
+  - toc
+---
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+# Capyboard
 
-## Commands
+Wecome to the Capyboard documentation.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+This is a documentation written for the [Capyboard devkit](https://github.com/realcharmer/capyboard) as a part of my master's thesis. Capyboard is a development board based on ESP32 and created specifically as an educational tool for gymnasiums and secondary schools. It can, however, be used in a wide range of real-world applications, just like any other ESP32 development kit.
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Capyboard and all its assets are fully open-source, including the board and module schematics.
