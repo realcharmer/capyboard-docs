@@ -1,0 +1,33 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - master
+
+env:
+  HOST: ${{ secrets.SSH_HOSTNAME }}
+  HOST_DIR: ${{ secrets.SSH_TARGET_DIR }}
+  SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+  SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        run: git clone https://github.com/realcharmer/capyboard-docs.git .
+
+      - name: Install MkDocs
+        run: pip install mkdocs-material mkdocs-awesome-pages-plugin
+
+      - name: Build
+        run: mkdocs build
+
+      - name: Deploy
+        run: |
+          eval "$(ssh-agent -s)"
+          echo "${SSH_PRIVATE_KEY}" | ssh-add -
+          mkdir -p ~/.ssh/
+          ssh-keyscan -H "${HOST}" >> ~/.ssh/known_hosts
+          rsync -ra --delete-after site/ "${SSH_USERNAME}@${HOST}:${HOST_DIR}"
