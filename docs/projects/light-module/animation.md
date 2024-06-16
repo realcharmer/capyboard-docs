@@ -10,11 +10,6 @@ This is a follow-up task to the previous [drawing of shapes](shapes.md). This ti
 
     You can try separating the frames into a second file, such as `frames.h`, and importing that file into your `main.ino`. This lets you create a complex set of frames without cluttering the entire source code.
 
-??? question "Useful links and resources"
-
-    - [Light Module](../../modules/light-module.md)
-    - [MD_MAX72xx library documentation](https://majicdesigns.github.io/MD_MAX72XX/class_m_d___m_a_x72_x_x.html)
-
 ## Challenges
 
 ??? tip "Channelnge 1"
@@ -24,6 +19,10 @@ This is a follow-up task to the previous [drawing of shapes](shapes.md). This ti
 ??? tip "Channelnge 2"
 
     Create multiple animated scenes.
+
+??? tip "Channelnge 3"
+
+    Use hexadecimal format all of the frames, just like in the challenge from the [previous project](shapes.md).
 
 ## Example
 
