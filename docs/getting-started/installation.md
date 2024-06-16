@@ -1,3 +1,7 @@
+---
+icon: material/cog
+---
+
 # Installation
 
 Capyboard is completely agnostic in terms of operating systems, as long as your system supports building firmware for ESP32, which covers most widely-used operating systems.

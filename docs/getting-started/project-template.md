@@ -1,3 +1,7 @@
+---
+icon: material/folder-cog
+---
+
 # Project Template
 
 Simple template for a project can be downloaded from a Git repository at <https://github.com/realcharmer/capyboard-starter>. It can be easily downloaded by using the following command: 

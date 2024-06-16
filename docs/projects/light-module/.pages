@@ -1,0 +1,5 @@
+nav:
+  - lights.md
+  - shapes.md
+  - animation.md
+  - game-of-life.md
