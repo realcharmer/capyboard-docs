@@ -4,12 +4,12 @@ icon: material/shape
 
 # Shapes
 
-Draw a custom shape, such as circle, qsuare, or a sprite. 
+Draw a custom shape, such as circle, qsuare, or a sprite. Do this by creating a two-dimensional array with a simple logic of `1` for light on and `0` for light off.
 
-## Resources
+??? question "Useful links and resources"
 
-- [Light Module](../../modules/light-module.md)
-- [MD_MAX72xx library documentation](https://majicdesigns.github.io/MD_MAX72XX/class_m_d___m_a_x72_x_x.html)
+    - [Light Module](../../modules/light-module.md)
+    - [MD_MAX72xx library documentation](https://majicdesigns.github.io/MD_MAX72XX/class_m_d___m_a_x72_x_x.html)
 
 ## Example
 
@@ -22,7 +22,7 @@ Draw a custom shape, such as circle, qsuare, or a sprite.
 
 MD_MAX72XX display = MD_MAX72XX(HARDWARE_TYPE, CS_PIN, SEGMENTS);
 
-const int shape[8][8] = {
+const int frame[8][8] = {
 	{0, 0, 0, 0, 0, 0, 0, 0},
 	{0, 1, 1, 0, 0, 1, 1, 0},
 	{1, 1, 1, 1, 1, 1, 1, 1},
@@ -33,10 +33,10 @@ const int shape[8][8] = {
 	{0, 0, 0, 0, 0, 0, 0, 0}
 };
 
-void displayShape(const int shape[8][8]) {
+void displayShape(const int frame[8][8]) {
 	for (int row = 0; row < 8; row++) {
 		for (int col = 0; col < 8; col++) {
-			display.setPoint(col, row, shape[row][col]);
+			display.setPoint(col, row, frame[row][col]);
 		}
 	}
 }
@@ -44,8 +44,7 @@ void displayShape(const int shape[8][8]) {
 void setup() {
 	display.begin();
 	display.clear();
-
-	displayShape(shape);
+	displayShape(frame);
 }
 
 void loop() {

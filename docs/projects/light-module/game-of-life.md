@@ -24,9 +24,3 @@ The fate of each cell from one moment to the next is determined by these simple 
 - **Survival**: If a cell is alive and has two or three live neighbors, it continues to live.
 - **Overcrowding**: If a cell is alive and has more than three live neighbors, it dies.
 - **Reproduction**: If a cell is dead but has exactly three live neighbors, it becomes alive.
-
-## How to Play
-
-- **Initial State**: You start with an initial pattern of live and dead cells on the grid.
-- **Update**: Apply the rules to every cell at the same time to create a new grid.
-- **Repeat**: Keep applying the rules to see how the grid evolves over time. Some patterns may stay the same, some may oscillate, and others may move across the grid.

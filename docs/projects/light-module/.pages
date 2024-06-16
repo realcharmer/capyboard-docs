@@ -2,4 +2,5 @@ nav:
   - lights.md
   - shapes.md
   - animation.md
+  - text-scrolling.md
   - game-of-life.md

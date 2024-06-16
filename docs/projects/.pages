@@ -1,4 +1,5 @@
 nav:
+  - index.md
   - mainboard
   - light-module
   - sensor-module

@@ -4,45 +4,78 @@ icon: material/animation
 
 # Animation
 
-Create animated scrolling text using the Parola library.
+This is a follow-up task to the previous [drawing of shapes](shapes.md). This time try creating a set of frames and animate them by displaying them one by one. You can try recreating a spinning shape, or even a complex moving object.
 
-## Resources
+!!! tip
 
-- [Light Module](../../modules/light-module.md)
-- [MD_MAX72xx library documentation](https://majicdesigns.github.io/MD_MAX72XX/class_m_d___m_a_x72_x_x.html)
-- [MD_Parola library documentation](https://majicdesigns.github.io/MD_Parola/class_m_d___parola.html)
+    You can try separating the frames into a second file, such as `frames.h`, and importing that file into your `main.ino`. This lets you create a complex set of frames without cluttering the entire source code.
 
+??? question "Useful links and resources"
 
-### Example
+    - [Light Module](../../modules/light-module.md)
+    - [MD_MAX72xx library documentation](https://majicdesigns.github.io/MD_MAX72XX/class_m_d___m_a_x72_x_x.html)
 
-```ini
-lib_deps =
-  MD_MAX72XX
-  MD_Parola
-```
+## Challenges
 
-`MD_Parola` builds upon the `MD_MAX72XX` library providing many interesting features, such as animations.
+??? tip "Channelnge 1"
+
+    Create an animation with more than two frames, such as countdown.
+
+??? tip "Channelnge 2"
+
+    Create multiple animated scenes.
+
+## Example
 
 ```arduino
-#include <MD_Parola.h>
 #include <MD_MAX72xx.h>
 
-#define HARDWARE_TYPE 
+#define HARDWARE_TYPE MD_MAX72XX::FC16_HW
 #define CS_PIN 10
 #define SEGMENTS 1
 
-MD_Parola display = MD_Parola(MD_MAX72XX::FC16_HW, CS_PIN, SEGMENTS);
+MD_MAX72XX display = MD_MAX72XX(HARDWARE_TYPE, CS_PIN, SEGMENTS);
+
+const int frames[2][8][8] = {
+	{
+		{0, 0, 0, 0, 0, 0, 0, 0},
+		{0, 0, 1, 0, 0, 1, 0, 0},
+		{0, 1, 1, 1, 1, 1, 1, 0},
+		{0, 1, 1, 1, 1, 1, 1, 0},
+		{0, 0, 1, 1, 1, 1, 0, 0},
+		{0, 0, 0, 1, 1, 0, 0, 0},
+		{0, 0, 0, 0, 0, 0, 0, 0},
+		{0, 0, 0, 0, 0, 0, 0, 0}
+	},
+	{
+		{0, 0, 0, 0, 0, 0, 0, 0},
+		{0, 1, 1, 0, 0, 1, 1, 0},
+		{1, 1, 1, 1, 1, 1, 1, 1},
+		{1, 1, 1, 1, 1, 1, 1, 1},
+		{0, 1, 1, 1, 1, 1, 1, 0},
+		{0, 0, 1, 1, 1, 1, 0, 0},
+		{0, 0, 0, 1, 1, 0, 0, 0},
+		{0, 0, 0, 0, 0, 0, 0, 0}
+	}
+};
+
+void displayShape(const int shape[8][8]) {
+	for (int row = 0; row < 8; row++) {
+		for (int col = 0; col < 8; col++) {
+			display.setPoint(col, row, shape[row][col]);
+		}
+	}
+}
 
 void setup() {
-    display.begin();
-    display.displayClear();
-    
-    ledMatrix.displayScroll("Capyboard", PA_CENTER, PA_SCROLL_LEFT, 100);
+	display.begin();
+	display.clear();
 }
 
 void loop() {
-    if (ledMatrix.displayAnimate()) {
-        ledMatrix.displayReset();
-    }
+	for (int i = 0; i < 2; i++) {
+		displayShape(frames[i]);
+		delay(500);
+	}
 }
 ```
