@@ -24,9 +24,13 @@ The point of this exercise is to light up the entire display using loops.
 
 ??? tip "Challenge 1"
 
-    Try animating the screen that it fills slowly one pixel after pixel.
+    Make the display turn on and off periodically.
 
 ??? tip "Challenge 2"
+
+    Try animating the screen that it fills slowly one pixel after pixel.
+
+??? tip "Challenge 3"
 
     Make it so that the animation flows like a snake, not only left-to-right or right-to-left.
 
