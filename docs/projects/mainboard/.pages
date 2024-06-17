@@ -1,5 +1,4 @@
 nav:
-  - serial.md
   - wi-fi.md
   - http-server.md
   - bluetooth.md

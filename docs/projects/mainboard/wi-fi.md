@@ -4,7 +4,11 @@ icon: material/wifi
 
 # Wi-Fi
 
-## Creating a Wi-Fi Accees Point
+!!! failure
+
+    This page is under construction.
+
+## Creating a Wi-Fi Access Point
 
 ```arduino
 #include <WiFi.h>

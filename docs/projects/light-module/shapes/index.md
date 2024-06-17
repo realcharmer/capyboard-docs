@@ -12,7 +12,7 @@ Draw a custom shape, such as circle, square, or a more complicated sprite. Do th
 
 ??? tip "Challenge 1"
 
-    Invert your shape **without modifying the shape itself**. Pixels which are now on should be off and vice-versa.
+    Invert your shape **without modifying the array itself**. Pixels which are now on should be off and vice-versa.
 
     ![Inverted Shape](shape-inverted.png){ width=150 }
 
