@@ -33,10 +33,12 @@ This is the configuration of the PlatformIO framework, such as the hardware plat
 ### partitions.csv
 
 ```ini
-# Name,   Type, SubType, Offset,   Size, Flags
-nvs,      data, nvs,     0x9000,   0x5000
-app0,     app,  factory, 0x10000,  0x3C0000
-spiffs,   data, spiffs,  0x3D0000, 0x30000
+# Name,   Type, SubType,  Offset,   Size, Flags
+nvs,      data, nvs,      0x9000,   0x5000,
+otadata,  data, ota,      0xe000,   0x2000,
+app0,     app,  ota_0,    0x10000,  0x200000,
+spiffs,   data, spiffs,   0x210000, 0x1E0000,
+coredump, data, coredump, 0x3F0000, 0x10000,
 ```
 
 This file is needed for the prototype boards, since they are using only 4MB of flash. This results in issues with larger firmwares. It reconfigures the partition scheme of the entire flash memory to expand the space for the firmware itself. Sadly, this change disables OTA (Over-the-air) updates.
