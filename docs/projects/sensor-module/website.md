@@ -8,4 +8,6 @@ icon: material/web
 
     This page is under construction.
 
-[#](../mainboard/http-server.md)
+!!! note
+
+    This project builds on the [HTTP Server](../mainboard/http-server.md) project. Make sure you're comfortable with setting up Wi-Fi connections and running an HTTP server before continuing.
