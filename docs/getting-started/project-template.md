@@ -23,25 +23,10 @@ The starter template contains few configuration files and a sample "Hello World"
 platform = espressif32
 board = esp32-s3-devkitc-1
 framework = arduino
-board_build.partitions = partitions.csv
-board_upload.flash_size = 4MB
 monitor_speed = 115200
 ```
 
-This is the configuration of the PlatformIO framework, such as the hardware platform and board specification. It also configures the board memory size.
-
-### partitions.csv
-
-```ini
-# Name,   Type, SubType,  Offset,   Size, Flags
-nvs,      data, nvs,      0x9000,   0x5000,
-otadata,  data, ota,      0xe000,   0x2000,
-app0,     app,  ota_0,    0x10000,  0x200000,
-spiffs,   data, spiffs,   0x210000, 0x1E0000,
-coredump, data, coredump, 0x3F0000, 0x10000,
-```
-
-This file is needed for the prototype boards, since they are using only 4MB of flash. This results in issues with larger firmwares. It reconfigures the partition scheme of the entire flash memory to expand the space for the firmware itself. Sadly, this change disables OTA (Over-the-air) updates.
+This is the configuration of the PlatformIO framework, such as the platform and board specification, as well as serial monitor speed.
 
 ### Makefile
 
