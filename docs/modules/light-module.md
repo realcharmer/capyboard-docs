@@ -47,3 +47,59 @@ void setup() {
 void loop() {
 }
 ```
+
+## Technical Details
+
+The **MAX7721** display driver must be configured correctly to accommodate specific LEDs. This board uses LEDs with a forward current of **20mA** and a forward voltage range of **1.6V** to **2.6V**. The chip is configured by selecting an appropriate resistance value for **R1**, as specified in the following table:
+
+<table align="center">
+<thead>
+  <tr>
+    <th rowspan="2">Current (mA)</th>
+    <th colspan="5" style="text-align: center">Voltage (V)</th>
+  </tr>
+  <tr>
+    <th>1.5<br></th>
+    <th>2.0<br></th>
+    <th>2.5</th>
+    <th>3.0</th>
+    <th>3.5</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>40</td>
+    <td>12.2</td>
+    <td>11.8<br></td>
+    <td>11.0</td>
+    <td>10.6</td>
+    <td>9.69</td>
+  </tr>
+  <tr>
+    <td>30</td>
+    <td>17.8<br></td>
+    <td>17.1</td>
+    <td>15.8</td>
+    <td>15.0</td>
+    <td>14.0</td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td>29.8<br></td>
+    <td>28.0</td>
+    <td>25.9</td>
+    <td>24.5</td>
+    <td>22.6</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>66.7</td>
+    <td>63.7</td>
+    <td>59.3</td>
+    <td>55.4</td>
+    <td>51.2</td>
+  </tr>
+</tbody>
+</table>
+
+In our case, the appropriate resistance value is approximately **25.9kΩ**. However, the board is currently using a resistor with a value of **26.1kΩ**.
