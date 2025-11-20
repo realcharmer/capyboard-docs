@@ -37,6 +37,8 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.highlight:
       anchor_linenums: true
+  - pymdownx.snippets:
+      url_download: true
   - pymdownx.superfences
   - footnotes
   - attr_list
