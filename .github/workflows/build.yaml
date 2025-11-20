@@ -24,6 +24,23 @@ jobs:
       - name: Build
         run: mkdocs build
 
+      - name: Upload site artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: site/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - name: Download site artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: site/
+
       - name: Deploy
         run: |
           eval "$(ssh-agent -s)"
