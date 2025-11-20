@@ -19,7 +19,7 @@ jobs:
         run: git clone https://github.com/realcharmer/capyboard-docs.git .
 
       - name: Install MkDocs
-        run: pip install mkdocs-material mkdocs-awesome-pages-plugin
+        run: pip install -r requirements.txt
 
       - name: Build
         run: mkdocs build
