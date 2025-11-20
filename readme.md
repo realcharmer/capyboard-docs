@@ -13,20 +13,20 @@ source venv/bin/activate \\
 pip install -r requirements.txt
 ```
 
-## 💡 Using MkDocs
+## 💡 Usage
 
 Serve the documentation locally for live preview while developing:
 
 ```sh
-mkdocs serve
+zensical serve
 ```
 
-This will run a local web server with the documentation accessible at <http://127.0.0.1:8000/>.
+This will run a local web server with the documentation accessible at <http://localhost:8000/>.
 
 You can also build the website files directly:
 
 ```sh
-mkdocs build
+zensical build
 ```
 
 The output will be saved to `site/`.

@@ -14,11 +14,11 @@ jobs:
       - name: Checkout repository
         run: git clone https://github.com/realcharmer/capyboard-docs.git .
 
-      - name: Install MkDocs
+      - name: Install Dependencies
         run: pip install -r requirements.txt
 
       - name: Build
-        run: mkdocs build
+        run: zensical build
 
       - name: Upload site artifact
         uses: actions/upload-artifact@v4
