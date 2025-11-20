@@ -10,6 +10,7 @@ theme:
   name: material
   language: en
   features:
+    - content.code.copy
     - search.suggest
     - search.highlight
     - naviagtion.footer
