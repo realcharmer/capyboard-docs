@@ -4,9 +4,7 @@ icon: material/wifi
 
 # Wi-Fi
 
-!!! failure
-
-    This page is under construction.
+The board is equipped with ESP32, which supports Wi-Fi. We can either create a new Wi-Fi access point, or connect to an existing network.
 
 ## Creating a Wi-Fi Access Point
 

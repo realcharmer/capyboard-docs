@@ -14,7 +14,7 @@ Create a simple HTTP server which sends you a plaintext message.
 
     This project requires a functional Wi-Fi connection.
 
-    Typically, the local Access Point (AP) on your Capyboard can be accessed via the address <http://192.168.4.1/>. Alternatively, you can connect your Capyboard to an existing Access Point, as described on the [Wi-Fi project page](../mainboard/wi-fi.md).
+    Typically, the local Access Point (AP) on your Capyboard can be accessed via the address <http://192.168.4.1/>. Alternatively, you can connect your Capyboard to an existing Access Point, as described on the [Wi-Fi project page](../mainboard/wifi.md).
 
 ## Challenges
 
