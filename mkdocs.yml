@@ -12,6 +12,7 @@ theme:
   features:
     - search.suggest
     - search.highlight
+    - naviagtion.footer
     - navigation.tabs
     - navigation.sections
     - navigation.indexes
@@ -42,3 +43,5 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+copyright: Created by Emil Miler
