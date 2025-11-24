@@ -4,6 +4,5 @@ icon: material/magnify
 
 # Sensor Module
 
-## Hardware Specifications
-
-## Pinout
+!!! info
+    Work in progress
